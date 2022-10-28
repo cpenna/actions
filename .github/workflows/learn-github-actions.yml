@@ -15,9 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: pwd
-      - run: apt update
-      - run: apt install python3 -y
-      - run: apt install python3-pip -y
+      - run: apt-get update
+      - run: apt-get install python3 -y
+      - run: apt-get install python3-pip -y
       - run: pip3 install mkdocs
       - run: mkdocs gh-deploy
